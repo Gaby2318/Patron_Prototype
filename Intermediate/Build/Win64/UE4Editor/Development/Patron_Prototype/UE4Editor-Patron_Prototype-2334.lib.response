@@ -1,0 +1,27 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Patron_Prototype-2334.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\Patron_PrototypeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\Bomba.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\BomberPrototype.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\GeneradorLaberinto.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\Muro.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\ObjetosLaberinto.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\Patron_Prototype.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\Patron_PrototypeCharacter.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\Patron_PrototypeGameMode.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\Bomba.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\BomberPrototype.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\GeneradorLaberinto.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\Muro.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\ObjetosLaberinto.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\Patron_Prototype.init.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\Patron_PrototypeCharacter.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\Patron_PrototypeGameMode.gen.cpp.obj"
+"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\Default.rc2.res"
+/OUT:"C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\UE4Editor-Patron_Prototype-2334.lib"

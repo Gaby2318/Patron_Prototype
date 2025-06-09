@@ -1,0 +1,3 @@
+C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Development\Patron_Prototype\Definitions.Patron_Prototype.h
+C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Source\Patron_Prototype\BomberPrototype.h
+C:\Users\Gaby\Documents\Unreal Projects\Patron_Prototype\Intermediate\Build\Win64\UE4Editor\Inc\Patron_Prototype\BomberPrototype.generated.h
