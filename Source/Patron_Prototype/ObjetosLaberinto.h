@@ -7,20 +7,34 @@
 #include "ObjetosLaberinto.generated.h"
 
 UCLASS()
-class PATRON_PROTOTYPE_API AObjetosLaberinto : public AActor
+class PATRON_PROTOTYPE_API AObjetosLaberinto : public AActor//, public IBomberPrototype // Ensure the interface is implemented
 {
-	GENERATED_BODY()
-	
+GENERATED_BODY()
+
 public:	
-	// Sets default values for this actor's properties
-	AObjetosLaberinto();
+// Sets default values for this actor's properties
+AObjetosLaberinto();
+
+// Implement the IBomberPrototype interface
+UFUNCTION(BlueprintNativeEvent, Category = "Prototype")
+UObject* Clone() const; // Ensure the function signature matches the interface
+//virtual UObject* Clone_Implementation() const override;
 
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Prototype")
+FName ObjectType;
+
+UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Prototype")
+UStaticMeshComponent* MeshComponent;
+
+protected:
+// Called when the game starts or when spawned
+virtual void BeginPlay() override;
 
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+// Called every frame
+virtual void Tick(float DeltaTime) override;
 
 };
+   
+

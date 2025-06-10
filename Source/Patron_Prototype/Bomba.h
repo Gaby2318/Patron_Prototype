@@ -13,5 +13,13 @@ UCLASS()
 class PATRON_PROTOTYPE_API ABomba : public AObjetosLaberinto
 {
 	GENERATED_BODY()
+
+public:
+	ABomba();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bomba")
+	float ExplosionRadius;
+
+	//virtual UObject* Clone_Implementation() override;
 	
 };
