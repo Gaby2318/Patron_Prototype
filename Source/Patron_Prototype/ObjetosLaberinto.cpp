@@ -10,6 +10,8 @@ AObjetosLaberinto::AObjetosLaberinto()
 {
     // Initialize components
 	PrimaryActorTick.bCanEverTick = true;
+
+    // Crear y configurar el componente de malla estática
     MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
     RootComponent = MeshComponent;
 }
@@ -19,25 +21,25 @@ UObject* AObjetosLaberinto::Clone() const
     return nullptr;
 }
 
-/*
-// Clone implementation
-UObject* AObjetosLaberinto::Clone_Implementation() const
-{ 
-// Crear una nueva instancia
-    AObjetosLaberinto* NewObject = GetWorld()->SpawnActor<AObjetosLaberinto>(GetClass(), GetActorTransform());
+UObject* AObjetosLaberinto::Clone_Implementation()
+{
+    // Crear una nueva instancia
+	AObjetosLaberinto* NewObject = GetWorld()->SpawnActor<AObjetosLaberinto>(GetClass(), GetActorTransform());
 
-    // Copiar propiedades
-    NewObject->ObjectType = ObjectType;
+	// Copiar propiedades
+	NewObject->ObjectType = ObjectType;
 
-    // Copiar el mesh si existe
-    if(MeshComponent)
-    {
-        NewObject->MeshComponent->SetStaticMesh(MeshComponent->GetStaticMesh());
-    }
+	// Copiar el mesh si existe
+	if (MeshComponent)
+	{
+		NewObject->MeshComponent->SetStaticMesh(MeshComponent->GetStaticMesh());
+	}
+	// Retornar el nuevo objeto clonado
+	if (NewObject)
+    return nullptr;
+}
 
-    return NewObject;
-	return nullptr;
-}*/
+
 
 // Called when the game starts or when spawned
 void AObjetosLaberinto::BeginPlay()

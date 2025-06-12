@@ -8,6 +8,10 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "GeneradorLaberinto.h"
+#include <Kismet/GameplayStatics.h>
+
+
 
 //////////////////////////////////////////////////////////////////////////
 // APatron_PrototypeCharacter
@@ -45,6 +49,11 @@ APatron_PrototypeCharacter::APatron_PrototypeCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
+}
+
+void APatron_PrototypeCharacter::BeginPlay()
+{
+	Super::BeginPlay();
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -137,4 +146,27 @@ void APatron_PrototypeCharacter::MoveRight(float Value)
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}
+}
+
+void APatron_PrototypeCharacter::ColocarBomba()  
+{  
+   // Spawnea una bomba en la ubicación del jugador  
+   if (BombaClass)  
+   {  
+       FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() * DistanciaColocacionBomba;  
+       FRotator SpawnRotation = GetActorRotation();  
+       GetWorld()->SpawnActor<AObjetosLaberinto>(BombaClass, SpawnLocation, SpawnRotation);  
+   }  
+
+   // Buscar el MazeManager en el nivel  
+   AGeneradorLaberinto* MazeManager = Cast<AGeneradorLaberinto>(UGameplayStatics::GetActorOfClass(GetWorld(), AGeneradorLaberinto::StaticClass()));  
+   if (MazeManager)  
+   {  
+       // Calcular posición de la bomba (alineada a la cuadrícula)  
+       FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() * DistanciaColocacionBomba;  
+      // SpawnLocation.Y = FMath::RoundToFloat(SpawnLocation.Y / MazeManager->CellSize) * MazeManager->CellSize;  
+
+       // Usar SpawnLocation calculado para llamar a SpawnObjectAtLocation  
+       MazeManager->SpawnObjectAtLocation(BombaClass, SpawnLocation);  
+   }  
 }

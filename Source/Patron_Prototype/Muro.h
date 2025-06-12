@@ -16,9 +16,11 @@ class PATRON_PROTOTYPE_API AMuro : public AObjetosLaberinto
 
 public:
 	AMuro();
+	// Propiedad específica: indica si la pared puede ser destruida
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Muro")
 	bool bIndestructible;
 
-	//virtual UObject* Clone_Implementation() override;
+	// Implementación del método Clone
+	virtual UObject* Clone_Implementation() override;
 	
 };

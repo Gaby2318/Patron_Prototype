@@ -5,6 +5,7 @@
 #include "Muro.h"
 #include "Bomba.h"
 
+
 // Sets default values
 AGeneradorLaberinto::AGeneradorLaberinto()
 {
@@ -23,7 +24,7 @@ void AGeneradorLaberinto::BeginPlay()
 }
 
 void AGeneradorLaberinto::GenerarLaberinto()
-{/*
+{
 	// Limpiar objetos existentes
 	for (AObjetosLaberinto* Object : LaberintoObjects)
 	{
@@ -56,10 +57,10 @@ void AGeneradorLaberinto::GenerarLaberinto()
 				}
 			}
 		}
-	}*/
+	}
 }
 // Example of spawning an object at a specific location
-/*AObjetosLaberinto* AGeneradorLaberinto::SpawnObjectAtLocation(TSubclassOf<AObjetosLaberinto> ObjectClass, FVector Location)
+AObjetosLaberinto* AGeneradorLaberinto::SpawnObjectAtLocation(TSubclassOf<AObjetosLaberinto> ObjectClass, FVector Location)
 {
 	if (!PrototypeClass) return nullptr;
     
@@ -80,7 +81,7 @@ void AGeneradorLaberinto::GenerarLaberinto()
     
     return NewObject;
 
-}*/
+}
 
 
 

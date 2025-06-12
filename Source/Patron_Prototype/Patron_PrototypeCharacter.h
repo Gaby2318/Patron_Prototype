@@ -28,18 +28,34 @@ public:
 	/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
+protected:
+	// Llamado al comenzar el juego
+	virtual void BeginPlay() override;
+	// Configuración de los controles de entrada
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+
+
+	// Colocar una bomba
+	void ColocarBomba();
+
+	// Clase de la bomba a spawnear
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bomba")
+	TSubclassOf<class AObjetosLaberinto> BombaClass;
+	// Distancia a la que se coloca la bomba frente al jugador
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bomba")
+	float DistanciaColocacionBomba= 500.f;
+
 
 protected:
 
 	/** Resets HMD orientation in VR. */
 	void OnResetVR();
 
-	/** Called for forwards/backward input */
+	// Mover hacia adelante/atrás
 	void MoveForward(float Value);
-
-	/** Called for side to side input */
+	// Mover a la derecha/izquierda
 	void MoveRight(float Value);
-
 	/** 
 	 * Called via input to turn at a given rate. 
 	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
@@ -68,5 +84,9 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+/*	// Add a getter method for CellSize.  
+public:
+	float GetCellSize() const { return CellSize; }*/
 };
 

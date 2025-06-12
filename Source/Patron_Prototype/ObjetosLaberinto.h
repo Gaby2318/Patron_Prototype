@@ -7,7 +7,7 @@
 #include "ObjetosLaberinto.generated.h"
 
 UCLASS()
-class PATRON_PROTOTYPE_API AObjetosLaberinto : public AActor//, public IBomberPrototype // Ensure the interface is implemented
+class PATRON_PROTOTYPE_API AObjetosLaberinto : public AActor, public IBomberPrototype // Ensure the interface is implemented
 {
 GENERATED_BODY()
 
@@ -18,12 +18,14 @@ AObjetosLaberinto();
 // Implement the IBomberPrototype interface
 UFUNCTION(BlueprintNativeEvent, Category = "Prototype")
 UObject* Clone() const; // Ensure the function signature matches the interface
-//virtual UObject* Clone_Implementation() const override;
+
+virtual UObject* Clone_Implementation() override;
 
 protected:
+	// Tipo del objeto para identificación
 UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Prototype")
 FName ObjectType;
-
+// Componente de malla estática para la representación visual
 UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Prototype")
 UStaticMeshComponent* MeshComponent;
 

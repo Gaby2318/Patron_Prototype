@@ -22,6 +22,7 @@ class PATRON_PROTOTYPE_API IBomberPrototype
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
+	// Función para clonar el objeto
 	UFUNCTION(BlueprintNativeEvent, Category = "Prototype")
 	UObject* Clone();
 

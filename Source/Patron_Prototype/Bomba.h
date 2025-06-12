@@ -16,10 +16,11 @@ class PATRON_PROTOTYPE_API ABomba : public AObjetosLaberinto
 
 public:
 	ABomba();
-
+	// Radio de explosión de la bomba
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bomba")
 	float ExplosionRadius;
 
-	//virtual UObject* Clone_Implementation() override;
+	// Implementación del método Clone
+	virtual UObject* Clone_Implementation() override;
 	
 };
